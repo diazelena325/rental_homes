@@ -1,0 +1,15 @@
+/*Navbar*/
+.accountIcon {
+    color:#545454;
+   transform: scale(1.2);
+ }
+
+.emailIcon {
+   color:#3C64B1;
+   transform: scale(1.55);
+}
+
+.helpIcon {
+    color:#545454;
+    transform: scale(0.9);
+ }
