@@ -1,84 +1,55 @@
-import React from 'react'
+import React from "react";
 import styled from "styled-components";
-import houseTest from '../images/house.png'
-import Star from "../images/star_solid.png";
+import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
+import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
+import CarouselItem from "./CarouselItem";
 
-function Carousel() {
+function Carousel(props) {
+  const cards = props.data.map((item) => {
+    return <CarouselItem key={item.id} item={item} />;
+  });
+
   return (
     <Container>
-        <Title>Favorite Rentals</Title>
-        <CarouselDiv>
-            <ImageContainDiv>
-              <ImageDiv>
-                <StarImg src={Star} />
- <Image src={houseTest} alt=''/>
-              </ImageDiv>
-           
-            <SubTitle>234 Sanger St.</SubTitle>
-            <Description>At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.</Description>
-            </ImageContainDiv>
-           
-        </CarouselDiv>
+      <Title>{props.title}</Title>
+      <CarouselDiv>
+        <ArrowShape>
+          <ArrowBackIosNewOutlinedIcon className="arrowIcon" />
+        </ArrowShape>
+
+        {cards}
+
+        <ArrowShape>
+          <ArrowForwardIosOutlinedIcon className="arrowIcon" />
+        </ArrowShape>
+      </CarouselDiv>
     </Container>
-  )
+  );
 }
 
 export default Carousel;
 
 const Container = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Title = styled.h1`
-    
+  font-family: Mulish;
+  font-size: 32px;
+  font-weight: bold;
 `;
 
 const CarouselDiv = styled.div`
-    
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 `;
 
-const ImageContainDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 23rem;
-    width: 16rem;
-`;
-
-const ImageDiv = styled.div`
-    display: grid;
-  position: relative;
-`;
-
-const Image = styled.img`
-    width: 100%;
-    height: 16.25rem;
-    overflow: hidden;
-     grid-column: 1;
-  grid-row: 1;
-  z-index: 1;
-`;
-
-const StarImg = styled.img`
-    grid-column: 1;
-  grid-row: 1;
-  z-index: 2;
-position: absolute;
- right: 1rem;
- top: 1rem;
-`;
-
-const SubTitle = styled.h4`
-    padding: 0;
-    margin: 32px 0px 12px 0px;
-    font-size: 1.1rem;
-    font-family: Mulish;
-    font-weight: bold;
-`;
-
-const Description = styled.span`
-    text-align: center;
-    font-size: 0.875rem;
+const ArrowShape = styled.div`
+  display: flex;
+  align-items: start;
 `;

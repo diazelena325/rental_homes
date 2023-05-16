@@ -13,3 +13,8 @@
     color:#545454;
     transform: scale(0.9);
  }
+
+ .arrowIcon {
+   color: #C3CBCD;
+   transform: scale(2);
+ }
