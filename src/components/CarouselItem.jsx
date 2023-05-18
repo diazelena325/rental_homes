@@ -70,6 +70,8 @@ const SubTitle = styled.h4`
 `;
 
 const Description = styled.span`
+font-family: Mulish;
   text-align: center;
   font-size: 0.875rem;
+  color: #373F41;
 `;

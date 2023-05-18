@@ -18,3 +18,15 @@
    color: #C3CBCD;
    transform: scale(2);
  }
+
+ .socialIcon {
+  color: #3C64B1;
+  transform: scale(2.5);
+
+ }
+
+ .twitterIcon {
+  color: white;
+  transform: scale(2);
+ 
+ }

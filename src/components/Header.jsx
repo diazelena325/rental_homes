@@ -6,7 +6,7 @@ import Bgimage from "../images/bg.png";
 function Header() {
   return (
     <Container>
-      <HeaderImageDiv>
+     <HeaderImageDiv>
         <StarImg src={Star} />
         <BgImg src={Bgimage} />
       </HeaderImageDiv>
@@ -37,6 +37,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: start;
 `;
+
 
 const HeaderImageDiv = styled.div`
   display: grid;
