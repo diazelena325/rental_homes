@@ -1,4 +1,4 @@
-See [Demo Here](https://rental-homes.netlify.app/)
+In progess: See [Demo Here](https://rental-homes.netlify.app/)
 
 # Getting Started with Create React App
 
