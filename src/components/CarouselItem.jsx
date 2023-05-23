@@ -5,15 +5,18 @@ import StarEmpty from "../images/star_empty.png";
 
 function CarouselItem(props) {
 let starOption;
-  
-if (props.item.favorite === true) {           
-starOption = <StarImg src={StarSolid} />    
-} else if (props.item.favorite === false){
-starOption = <StarImg src={StarEmpty} />
+const [starFav, setStarFav] = React.useState(props.item.favorite);
+
+function toggleFavorite(id) {
+setStarFav(prevStar => !prevStar)
+}
+
+if (starFav === true) {           
+starOption = <StarImg src={StarSolid} onClick={toggleFavorite}/>    
+} else if (starFav === false){
+starOption = <StarImg src={StarEmpty} onClick={toggleFavorite}/>
 }
     
- 
-
   return (
     <ImageContainDiv>
       <ImageDiv>
@@ -59,6 +62,7 @@ const StarImg = styled.img`
   position: absolute;
   right: 1rem;
   top: 1rem;
+  cursor: pointer;
 `;
 
 const SubTitle = styled.h4`
@@ -67,6 +71,12 @@ const SubTitle = styled.h4`
   font-size: 1.1rem;
   font-family: Mulish;
   font-weight: bold;
+
+  cursor: pointer;
+
+  &:hover{
+  text-decoration: underline;
+}
 `;
 
 const Description = styled.span`

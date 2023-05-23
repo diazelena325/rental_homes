@@ -14,10 +14,11 @@ function Logo() {
 export default Logo;
 
 const HouseImg = styled.img`
-  
+  cursor: pointer;
 `;
 
 const LogoText = styled.span`
+cursor: pointer;
 width: 30%;
     color: #3C64B1;
     font-family: 'Lato', sans-serif;

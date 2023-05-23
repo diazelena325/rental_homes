@@ -12,8 +12,8 @@ export default function Navbar() {
         <Logo />
       </LeftDiv>
       <RightDiv>
-        <Link>Browse Homes for Rent</Link>
-        <Link>Advance Search</Link>
+        <Link href="">Browse Homes for Rent</Link>
+        <Link href="">Advance Search</Link>
         <AcctShape>
           <AccountCircleOutlinedIcon className="accountIcon" />
         </AcctShape>
@@ -48,11 +48,13 @@ const RightDiv = styled.div`
   gap: 14px;
 `;
 
-const Link = styled.span`
+const Link = styled.a`
   color: #373f41;
   font-size: 14px;
   font-weight: 600;
   font-family: "Mulish", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
 `;
 
 const AcctShape = styled.div`
@@ -64,4 +66,5 @@ const AcctShape = styled.div`
   background-color: #e5e5e5;
   height: 48px;
   width: 48px;
+  cursor: pointer;
 `;

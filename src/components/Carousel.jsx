@@ -39,6 +39,8 @@ const Title = styled.h1`
   font-family: Mulish;
   font-size: 32px;
   font-weight: bold;
+  cursor: pointer;
+
 `;
 
 const CarouselDiv = styled.div`

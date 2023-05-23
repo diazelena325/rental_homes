@@ -1,13 +1,27 @@
 import React from "react";
 import styled from "styled-components";
-import Star from "../images/star_empty.png";
+import StarSolid from "../images/star_solid.png";
+import StarEmpty from "../images/star_empty.png";
 import Bgimage from "../images/bg.png";
 
 function Header() {
+  let starOption;
+const [starFav, setStarFav] = React.useState(false);
+
+function toggleFavorite(id) {
+setStarFav(prevStar => !prevStar)
+}
+
+if (starFav === true) {           
+starOption = <StarImg src={StarSolid} onClick={toggleFavorite}/>    
+} else if (starFav === false){
+starOption = <StarImg src={StarEmpty} onClick={toggleFavorite}/>
+}
+
   return (
     <Container>
      <HeaderImageDiv>
-        <StarImg src={Star} />
+     {starOption}
         <BgImg src={Bgimage} />
       </HeaderImageDiv>
 
@@ -55,6 +69,7 @@ const BgImg = styled.img`
 `;
 
 const StarImg = styled.img`
+cursor: pointer;
 grid-column: 1;
   grid-row: 1;
   z-index: 2;
@@ -81,6 +96,7 @@ const Title = styled.h1`
 const Desc = styled.span``;
 
 const DetButton = styled.button`
+cursor: pointer;
   background-color: #3c64b1;
   color: #ffffff;
   border: none;

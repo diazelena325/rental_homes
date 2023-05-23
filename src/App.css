@@ -1,31 +1,39 @@
 /*Navbar*/
 .accountIcon {
+  cursor: pointer;
     color:#545454;
    transform: scale(1.2);
  }
 
 .emailIcon {
+  cursor: pointer;
    color:#3C64B1;
    transform: scale(1.55);
 }
 
 .helpIcon {
+  cursor: pointer;
     color:#545454;
     transform: scale(0.9);
  }
 
+ /*Carousel*/
  .arrowIcon {
+  cursor: pointer;
    color: #C3CBCD;
    transform: scale(2);
  }
 
  .socialIcon {
+  cursor: pointer;
   color: #3C64B1;
   transform: scale(2.5);
 
  }
 
+ /*Footer*/
  .twitterIcon {
+  cursor: pointer;
   color: white;
   transform: scale(2);
  
