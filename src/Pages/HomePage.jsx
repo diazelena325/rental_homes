@@ -12,12 +12,12 @@ import Banner from '../components/Banner';
 function HomePage() {
   return (
     <Container>
-     <Navbar/>
+    
      <Header/>
      <Carousel data={houseData} title="Favorite Rentals"/>
      <Carousel data={renterData} title="Favorite Rentals"/>
      <Banner/>
-     <Footer/>
+     
     </Container>
   )
 }

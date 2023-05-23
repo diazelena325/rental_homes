@@ -5,12 +5,12 @@ import HomePage from './Pages/HomePage';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 
-//<HomePage/>
+//<Browse/>
 function App() {
   return (
     <Main>
       <Navbar/>
-      <Browse/>
+      <HomePage/>
       <Footer/>
     </Main>
   );
