@@ -13,7 +13,7 @@ function HomePage() {
     
      <Header/>
      <Carousel data={houseData} title="Favorite Rentals"/>
-     <Carousel data={renterData} title="Favorite Rentals"/>
+     <Carousel data={renterData} title="Rental Types"/>
      <Banner/>
      
     </Container>

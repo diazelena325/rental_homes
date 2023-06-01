@@ -38,3 +38,10 @@
   transform: scale(2);
  
  }
+
+ /*SummaryListing*/
+ .summaryIcon{
+  margin: 20px;
+  color: #85b6ff;
+  transform: scale(2);
+ }
